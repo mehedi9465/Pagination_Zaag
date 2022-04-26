@@ -17,4 +17,19 @@ export interface TableDataInit {
     posts: InitPost[],
     paginationPage: number,
     rowsPerPage: number
+    getDetails: any
+}
+
+export interface useDataType {
+    tempPage: number;
+    paginationPage: number;
+    totalPostCount: number;
+    isLoading: boolean;
+    posts: InitPost[];
+    postInterval: any;
+    rowsPerPage: number;
+    tempPageStart: number;
+    setPaginationPage: React.Dispatch <any>;
+    setTempPage: React.Dispatch <any>;
+    setTempPageStart: React.Dispatch <any>;
 }

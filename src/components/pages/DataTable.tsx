@@ -1,7 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { Column, InitPost, TableDataInit } from './interfaces';
+import { Column, TableDataInit } from './interfaces';
 
 const columns: readonly Column[] = [
     { id: "title", label: "Title", minWidth: 170 },
@@ -10,16 +9,7 @@ const columns: readonly Column[] = [
     { id: "author", label: "Author", minWidth: 100 },
 ];
 
-const DataTable: React.FC <TableDataInit> = ({ posts, paginationPage, rowsPerPage }) => {
-    const history = useHistory();
-    console.log(posts);
-    
-    const getDetails = (post: InitPost) => {
-        history.push({
-            pathname: '/details',
-            state: post
-        })
-    }
+const DataTable: React.FC<TableDataInit> = ({ posts, paginationPage, rowsPerPage, getDetails }) => {
 
     return (
         <Table stickyHeader aria-label="sticky table" data-testid="dataTable">

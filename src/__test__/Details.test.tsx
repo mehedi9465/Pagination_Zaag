@@ -31,4 +31,3 @@ it('Check the data is rendering in the P tag?', () => {
     const details = screen.getByText("Hello");
     expect(details).toBeInTheDocument();
 });
-

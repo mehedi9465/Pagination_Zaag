@@ -9,7 +9,7 @@ it('Render DataTable component', () => {
         author: string
     }
     const posts: InitPost[] = []
-    render(<DataTable posts={posts} paginationPage={0} rowsPerPage={0}/>);
+    render(<DataTable posts={posts} paginationPage={0} rowsPerPage={0} getDetails={function(){}}/>);
     const dataTable = screen.getByTestId("dataTable");
     expect(dataTable).toBeInTheDocument();
 });
@@ -22,7 +22,7 @@ it('Check If the Table is Rendered?', () => {
         author: string
     }
     const posts: InitPost[] = []
-    render(<DataTable posts={posts} paginationPage={0} rowsPerPage={0} />);
+    render(<DataTable posts={posts} paginationPage={0} rowsPerPage={0} getDetails={function () { }}/>);
     const dataTable = screen.getByRole("table");
     expect(dataTable).toBeInTheDocument();
 });
@@ -35,7 +35,7 @@ it('Check if the data row is rendered in the table?', () => {
         author: string
     }
     const posts: InitPost[] = []
-    render(<DataTable posts={posts} paginationPage={0} rowsPerPage={0} />);
+    render(<DataTable posts={posts} paginationPage={0} rowsPerPage={0} getDetails={function () { }}/>);
     const dataTable = screen.getByTestId("dataRow");
     expect(dataTable).toBeInTheDocument();
 });
