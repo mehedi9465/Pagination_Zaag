@@ -9,11 +9,12 @@ import {
 import DataTable from "./DataTable";
 import { InitPost } from "./interfaces";
 import { useHistory } from 'react-router-dom';
-import useData from "./useData";
+import { useContext } from "react";
+import { DataContext } from "./DataProvider";
 
 const Home: React.FC = () => {
     const history = useHistory();
-    const { paginationPage, posts, isLoading, setPaginationPage, rowsPerPage, totalPostCount, setTempPageStart, tempPageStart } = useData();
+    const { paginationPage, posts, isLoading, setPaginationPage, rowsPerPage, totalPostCount, setTempPageStart, tempPageStart } = useContext(DataContext);
     
     const getDetails = (post: InitPost) => {
         history.push({

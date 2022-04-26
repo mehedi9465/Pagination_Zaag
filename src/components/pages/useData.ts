@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { InitPost } from "./interfaces";
+import { InitPost, useDataType } from "./interfaces";
 
-const useData = () => {
+const useData = () : useDataType => {
     const [tempPageStart, setTempPageStart] = useState<number>(1);
     const [tempPage, setTempPage] = useState<number>(tempPageStart);
     const [paginationPage, setPaginationPage] = useState<number>(1);

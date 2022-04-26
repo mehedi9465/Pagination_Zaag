@@ -26,10 +26,10 @@ export interface useDataType {
     totalPostCount: number;
     isLoading: boolean;
     posts: InitPost[];
-    postInterval: any;
+    postInterval: typeof setInterval;
     rowsPerPage: number;
     tempPageStart: number;
-    setPaginationPage: React.Dispatch <any>;
-    setTempPage: React.Dispatch <any>;
-    setTempPageStart: React.Dispatch <any>;
+    setPaginationPage: React.Dispatch<React.SetStateAction<number>>;
+    setTempPage: React.Dispatch<React.SetStateAction<number>>;
+    setTempPageStart: React.Dispatch<React.SetStateAction<number>>;
 }

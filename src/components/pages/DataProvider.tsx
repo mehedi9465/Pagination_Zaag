@@ -8,10 +8,10 @@ type DataContextProviderProps = {
 
 export const DataContext = createContext<any | null>(null);
 
-const DataProvider: React.FC = ({ children: DataContextProviderProps }) => {
+const DataProvider = ({ children }: DataContextProviderProps) => {
     const allContext: useDataType = useData();
     return (
-        <DataContext.Provider>
+        <DataContext.Provider value={allContext}>
             {children}
         </DataContext.Provider>
     );
