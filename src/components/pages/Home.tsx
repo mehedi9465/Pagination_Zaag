@@ -1,11 +1,4 @@
-import {
-    Box,
-    CircularProgress,
-    Container,
-    Pagination,
-    Paper,
-    TableContainer,
-} from "@mui/material";
+import { Box, CircularProgress, Container, Pagination, Paper, TableContainer } from "@mui/material";
 import DataTable from "./DataTable";
 import { InitPost } from "./interfaces";
 import { useHistory } from 'react-router-dom';
@@ -26,8 +19,6 @@ const Home: React.FC = () => {
     const handleChangePage = async (event: unknown, newPage: number) => {
         setPaginationPage(newPage);
         setTempPageStart(newPage)
-        // console.log(newPage);
-        
     }
 
     return (

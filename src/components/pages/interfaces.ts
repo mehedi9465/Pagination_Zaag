@@ -17,14 +17,13 @@ export interface TableDataInit {
     posts: InitPost[],
     paginationPage: number,
     rowsPerPage: number
-    getDetails: any
+    getDetails: Function
 }
 
 export interface useDataType {
     tempPage: number;
     paginationPage: number;
     totalPostCount: number;
-    isLoading: boolean;
     posts: InitPost[];
     postInterval: typeof setInterval;
     rowsPerPage: number;

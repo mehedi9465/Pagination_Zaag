@@ -19,15 +19,15 @@ it('Render details component', () => {
 });
 
 
-it('Check the data is rendering in the P tag?', () => {
+// it('Check the data is rendering in the P tag?', () => {
 
-    const history = createMemoryHistory();
-    history.push("/details", "Hello");
-    render(
-        <Router history={history}>
-            <Details/>
-        </Router>
-    );
-    const details = screen.getByText("Hello");
-    expect(details).toBeInTheDocument();
-});
+//     const history = createMemoryHistory();
+//     history.push("/details", "Hello");
+//     render(
+//         <Router history={history}>
+//             <Details/>
+//         </Router>
+//     );
+//     const details = screen.getByText("Hello");
+//     expect(details).toBeInTheDocument();
+// });
